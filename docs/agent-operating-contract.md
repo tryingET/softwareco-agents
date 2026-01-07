@@ -26,3 +26,8 @@ read_when:
 - Acceptance criteria met (for slices).
 - Evidence attached (tests/logs/screenshots where relevant).
 - Risks + rollback documented.
+
+## QA gates (when a dedicated reviewer is required)
+If a change hits a high-risk trigger (governed paths, interface/contract change,
+destructive change, safety boundary expansion, weak evidence), route it through a
+Quality Reviewer role (see `docs/agent-roles.md`).
