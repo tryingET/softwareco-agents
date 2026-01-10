@@ -9,5 +9,5 @@ Define how agents propose work, coordinate by consent, and produce deterministic
 - Keep “agent behavior” explicit: triggers, invariants, failure modes.
 
 ## References
-- Holding OS: `ai-society/holdingco/holdingco-os`
+- Governance kernel: `ai-society/holdingco/governance-kernel`
 - Templates: `ai-society/holdingco/holdingco-templates`
