@@ -4,7 +4,7 @@ read_when:
   - "Changing tpl-agent-repo at any layer (L0/L1/L2), the agent manifest convention, skill profiles, or the registry."
   - "Creating, updating, or retiring agents at fleet scale."
 type: "design"
-status: "proposed (awaiting operator ratification of open calls)"
+status: "ratified design; implementation proceeds by owning tasks"
 ---
 
 # Agent fleet at scale — template system design (2026-08-27)
@@ -54,7 +54,7 @@ skeletons = template-owned. `docs/person/**`, `docs/learnings/**`,
 `docs/decisions/**`, `diary/**`, `prompts/activities/**`, `agent.json`
 *values* (skills, tools, scope, version) = agent-owned.
 
-**Invariant I2 — single identity source.** The six persona docs
+**Invariant I2 — single identity source.** The five authored persona docs
 (identity/reason/main_task/dream_goal/behavior_rules) are the authored soul;
 the system prompt is **compiled from them**, not parallel to them. Today the
 steward duplicates both and already drifted once. At 1000 agents, duplicated
@@ -151,14 +151,11 @@ for demonstrated pain.
 | 5 | registry (5098) | add `role`, lint subcommand (I4/I5/freshness/staleness), collision check | tests incl. real fleet walk |
 | 6 | L2 backfill | steward re-render via propagation script (dogfood); legacy three: additive manifests only | propagation diff reviewed by owner |
 
-## 8. Open calls for the operator (everything else is decided above)
+## 8. Ratified calls
 
-a) **Persona docs:** keep the six-doc soul model (agent-owned, feeds the
-   compiler) vs collapse to a single `persona.md`. Recommend KEEP (they're
-   agent-owned, cost nothing to propagate, and the soul model is your
-   original vision).
-b) **Creation gate strictness:** AK-task-per-agent (recommended) vs
-   registry-lint-only (looser). Recommend the AK task; it's one command and
-   it's the anti-sprawl valve.
+a) **Persona docs:** keep the existing authored persona model; persona is
+   agent-owned and may narrow, never widen, fleet authority.
+b) **Creation gate strictness:** require one exact AK creation task per agent;
+   registry checks supplement rather than replace this anti-sprawl gate.
 c) **Legacy agents (triage/health/consent-steward):** backfill manifests
-   now (recommended — makes registry complete) vs leave until touched.
+   additively and leave existing persona bytes untouched.
