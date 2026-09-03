@@ -1,13 +1,92 @@
 {
+  "schema": "softwareco-agents.decomposition/1",
+  "status": "candidate_owner_contract_acceptance_pending",
+  "repository": "tryingET/softwareco-agents",
+  "current_role": "transitional incubation, discovery, and migration-coordination surface",
+  "semantic_authority": false,
+  "retirement_is_stage_b": true,
   "preserve_history": true,
   "redirect_before_retire": true,
-  "repository": "tryingET/softwareco-agents",
-  "retirement_is_stage_b": true,
-  "roles_migrate_to": [
-    "society-level agent repositories",
-    "company-level agent repositories"
+  "one_agent_one_repository": true,
+  "authority_boundaries": {
+    "governance_law": "tryingET/governance-kernel",
+    "generic_agent_contract": "tryingET/core_tpl-template-repo",
+    "provider_content": "provider owners and tryingET/prompt-vault",
+    "release_and_run_authorization": "tryingET/agent-kernel after owner acceptance",
+    "runtime_and_effects": "Pi, registry, and ASC owners",
+    "company_lane_baseline": "the appointing company parent",
+    "agent_persona_and_history": "the standalone child agent repository"
+  },
+  "decomposition_targets": [
+    {
+      "content": "society-appointed agent role, persona, policy, source history, and evidence",
+      "target": "~/ai-society/agents/agent-*",
+      "condition": "accountable society appointment and standalone repository acceptance"
+    },
+    {
+      "content": "company-appointed agent role, persona, policy, source history, and evidence",
+      "target": "~/ai-society/<company>/agents/agent-*",
+      "condition": "accountable company appointment and parent lane contract acceptance"
+    },
+    {
+      "content": "company agents-lane baseline",
+      "target": "the appointing company parent repository",
+      "condition": "parent ignores child repositories and tracks no child-owned files"
+    },
+    {
+      "content": "shared governance, L0, provider, release/permit, runtime, and effect semantics",
+      "target": "existing semantic owners",
+      "condition": "native owner artifact and explicit acceptance"
+    }
   ],
-  "schema": "softwareco-agents.decomposition/1",
-  "semantic_authority": false,
-  "status": "transitional-incubator"
+  "required_sequence": [
+    "inventory current content and classify current versus historical material",
+    "bind each concern to exactly one semantic owner",
+    "obtain native owner acceptance or explicit temporary proxy acceptance",
+    "publish durable redirects and compatibility references",
+    "copy or move content without rewriting source history or agent-owned bytes",
+    "verify links, ownership, rollback, and historical availability",
+    "retire this authority surface only through a separately authorized Stage B action"
+  ],
+  "prohibited_during_gate_a": [
+    "archive, delete, or retire the repository",
+    "move or activate a live agent",
+    "claim proxy transfer as implementation completion",
+    "retain duplicate semantic authority after native transfer",
+    "rewrite historical evidence to appear current",
+    "derive appointment or authorization from repository placement"
+  ],
+  "failure_semantics": {
+    "missing_target_owner": "blocked",
+    "owner_rejects_transfer": "blocked_and_replan",
+    "history_or_persona_loss_risk": "blocked",
+    "dual_authority_after_transfer": "blocked",
+    "broken_redirect_or_rollback": "not_ready_for_retirement",
+    "native_artifact_unaccepted": "proxy_remains_non_authoritative"
+  },
+  "compatibility": {
+    "current_repository_remains_available": true,
+    "current_links_remain_valid_until_redirects_are_verified": true,
+    "historical_material_retained": true,
+    "no_gate_a_runtime_change": true
+  },
+  "rollback": [
+    "leave this repository active as the transitional surface",
+    "remove or revert only unaccepted redirects",
+    "restore the prior routing map without deleting transferred history",
+    "never reactivate duplicate semantic authority automatically"
+  ],
+  "acceptance_scenarios": [
+    "every concern has exactly one target semantic owner",
+    "agent-owned bytes and Git history remain recoverable",
+    "redirects distinguish current owner contracts from historical material",
+    "the transitional repository makes no appointment, release, permit, runtime, or effect claim",
+    "retirement remains a separately authorized Stage B action"
+  ],
+  "reversal_triggers": [
+    "a target owner cannot preserve required history or compatibility",
+    "decomposition would create two semantic owners or none",
+    "an accepted architecture decision assigns a continuing native concern to this repository",
+    "rollback cannot restore routing without authority ambiguity"
+  ]
 }
