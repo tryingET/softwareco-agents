@@ -1,0 +1,13 @@
+{
+  "preserve_history": true,
+  "redirect_before_retire": true,
+  "repository": "tryingET/softwareco-agents",
+  "retirement_is_stage_b": true,
+  "roles_migrate_to": [
+    "society-level agent repositories",
+    "company-level agent repositories"
+  ],
+  "schema": "softwareco-agents.decomposition/1",
+  "semantic_authority": false,
+  "status": "transitional-incubator"
+}
