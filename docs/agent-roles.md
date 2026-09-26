@@ -35,8 +35,8 @@ A role card records:
 - **IFC (interfaces and contracts):** inputs, outputs, handoffs, failure mode;
 - **GOV (governance and risk):** authority ceiling, consent boundaries,
   blocking objections, review cadence;
-- **Placement layers:** Strategic, Design & Configuration, Implementation, and/or Operations
-  & Evaluation.
+- **MITO segment(s):** Führung, Input, Transformation, Output and/or Leitung, plus the level the
+  role works at (usually dispositiv or operativ).
 
 Creation review compares the proposed role name, pain, outputs, boundaries, and
 cadence with every current or stale registry entry. A collision is resolved by
@@ -99,7 +99,7 @@ and migration guidance.
   request clarification rather than guessing governance.
 - **GOV:** object to unclear boundaries, undocumented interface changes, or
   ignored consent tiers; review architecture-impacting changes.
-- **Placement layers:** Strategic; Design & Configuration.
+- **MITO segment(s):** Führung (boundaries, viewpoints, interfaces); Input (design documentation).
 
 ### Builder
 
@@ -112,7 +112,7 @@ and migration guidance.
   rollback out; stop when criteria are unclear.
 - **GOV:** object to unauthorized real-world actions or secrets in git;
   self-review before requesting review.
-- **Placement layers:** Implementation.
+- **MITO segment(s):** Transformation.
 
 ### Test Builder
 
@@ -124,7 +124,7 @@ and migration guidance.
 - **IFC:** behavior/contracts/bugs in; tests, plans, repros, and verification out;
   require a precise behavior statement when unclear.
 - **GOV:** object to behavior changes without evidence; review high-risk work.
-- **Placement layers:** Implementation; Operations & Evaluation.
+- **MITO segment(s):** Transformation (test code); Output (correctness evidence).
 
 ### Integrator
 
@@ -136,7 +136,7 @@ and migration guidance.
 - **IFC:** interface/dependency/runtime constraints in; adapters, configuration,
   smoke tests, and rollback out; isolate blast radius.
 - **GOV:** object to interface breaks without migration; review interface work.
-- **Placement layers:** Design & Configuration; Implementation.
+- **MITO segment(s):** Input (interfaces, dependencies, configuration); Transformation.
 
 ### Quality Reviewer
 
@@ -150,7 +150,7 @@ and migration guidance.
   approve/request-changes/object verdict out; request missing evidence.
 - **GOV:** blocking criteria are limited to the QA gate above; required on gate
   triggers and optional or sampled otherwise.
-- **Placement layers:** Operations & Evaluation.
+- **MITO segment(s):** Output (verification against acceptance criteria); Leitung (review, improvement).
 
 Add roles only after recurring pain passes the creation and collision gate; do
 not maintain a speculative expansion list.
