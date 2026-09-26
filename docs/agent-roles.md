@@ -35,7 +35,7 @@ A role card records:
 - **IFC (interfaces and contracts):** inputs, outputs, handoffs, failure mode;
 - **GOV (governance and risk):** authority ceiling, consent boundaries,
   blocking objections, review cadence;
-- **MITO:** Strategic, Design & Configuration, Implementation, and/or Operations
+- **Placement layers:** Strategic, Design & Configuration, Implementation, and/or Operations
   & Evaluation.
 
 Creation review compares the proposed role name, pain, outputs, boundaries, and
@@ -99,7 +99,7 @@ and migration guidance.
   request clarification rather than guessing governance.
 - **GOV:** object to unclear boundaries, undocumented interface changes, or
   ignored consent tiers; review architecture-impacting changes.
-- **MITO:** Strategic; Design & Configuration.
+- **Placement layers:** Strategic; Design & Configuration.
 
 ### Builder
 
@@ -112,7 +112,7 @@ and migration guidance.
   rollback out; stop when criteria are unclear.
 - **GOV:** object to unauthorized real-world actions or secrets in git;
   self-review before requesting review.
-- **MITO:** Implementation.
+- **Placement layers:** Implementation.
 
 ### Test Builder
 
@@ -124,7 +124,7 @@ and migration guidance.
 - **IFC:** behavior/contracts/bugs in; tests, plans, repros, and verification out;
   require a precise behavior statement when unclear.
 - **GOV:** object to behavior changes without evidence; review high-risk work.
-- **MITO:** Implementation; Operations & Evaluation.
+- **Placement layers:** Implementation; Operations & Evaluation.
 
 ### Integrator
 
@@ -136,7 +136,7 @@ and migration guidance.
 - **IFC:** interface/dependency/runtime constraints in; adapters, configuration,
   smoke tests, and rollback out; isolate blast radius.
 - **GOV:** object to interface breaks without migration; review interface work.
-- **MITO:** Design & Configuration; Implementation.
+- **Placement layers:** Design & Configuration; Implementation.
 
 ### Quality Reviewer
 
@@ -150,7 +150,7 @@ and migration guidance.
   approve/request-changes/object verdict out; request missing evidence.
 - **GOV:** blocking criteria are limited to the QA gate above; required on gate
   triggers and optional or sampled otherwise.
-- **MITO:** Operations & Evaluation.
+- **Placement layers:** Operations & Evaluation.
 
 Add roles only after recurring pain passes the creation and collision gate; do
 not maintain a speculative expansion list.
