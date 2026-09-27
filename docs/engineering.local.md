@@ -10,7 +10,7 @@ type: "reference"
 ## Upstream
 
 - Source: `core/engineering-core`
-- Release pin: `v0.7.0`
+- Release pin: `v0.12.2`
 - Policy: `policy/engineering-lane.json`
 
 ## Selected guidance
